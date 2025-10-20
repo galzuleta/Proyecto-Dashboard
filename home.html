@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Evolución de Sistemas Operativos</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Evolución de Sistemas Operativos (2001-2024)</h1>
+                <p class="description">Representación visual a lo largo del tiempo para Windows, Linux y macOS.</p>
+            </header>
+            
+            <div class="stats-cards">
+                <div class="stat-card windows">
+                    <h3>Windows</h3>
+                    <div class="stat-value" id="windows-stat">0%</div>
+                    <div class="stat-change" id="windows-change">+0%</div>
+                    <p>Cuota actual</p>
+                </div>
+                <div class="stat-card linux">
+                    <h3>Linux</h3>
+                    <div class="stat-value" id="linux-stat">0%</div>
+                    <div class="stat-change" id="linux-change">+0%</div>
+                    <p>Cuota actual</p>
+                </div>
+                <div class="stat-card macos">
+                    <h3>macOS</h3>
+                    <div class="stat-value" id="macos-stat">0%</div>
+                    <div class="stat-change" id="macos-change">+0%</div>
+                    <p>Cuota actual</p>
+                </div>
+            </div>
+            
+            <div class="dashboard">
+                <div class="controls">
+                    <h2>Controles</h2>
+                    <div class="checkbox-group">
+                        <h3>Selecciona Sistemas Operativos</h3>
+                        <div class="checkbox-item windows">
+                            <input type="checkbox" id="windows" checked>
+                            <label for="windows">
+                                <span class="color-indicator"></span>
+                                Windows
+                            </label>
+                        </div>
+                        <div class="checkbox-item linux">
+                            <input type="checkbox" id="linux" checked>
+                            <label for="linux">
+                                <span class="color-indicator"></span>
+                                Linux
+                            </label>
+                        </div>
+                        <div class="checkbox-item macos">
+                            <input type="checkbox" id="macos" checked>
+                            <label for="macos">
+                                <span class="color-indicator"></span>
+                                macOS
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="time-range">
+                        <h3>Rango de Años</h3>
+                        <select id="timeRange">
+                            <option value="5">Últimos 5 años</option>
+                            <option value="10">Últimos 10 años</option>
+                            <option value="all" selected>Todo el período (2001-2024)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="chart-type">
+                        <h3>Tipo de Gráfico</h3>
+                        <select id="chartType">
+                            <option value="line" selected>Gráfico de Líneas</option>
+                            <option value="bar">Gráfico de Barras</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="osChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="data-table">
+                <h2>Datos Anuales de Porcentaje de Usuarios</h2>
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Año</th>
+                            <th>Windows (%)</th>
+                            <th>Linux (%)</th>
+                            <th>macOS (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los datos se llenarán con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <footer>
+                <p>Dashboard creado para visualizar la evolución de sistemas operativos | Datos basados en tendencias históricas</p>
+            </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="funcionalidad.js"></script>
+    </body>
+</html>
